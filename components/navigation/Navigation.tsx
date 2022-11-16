@@ -7,6 +7,8 @@ import clsx from "clsx";
 import { routes } from "../../consts/routes";
 import Link from "next/link";
 
+export const navigationWidth = "144px";
+
 const iconSize = {
   width: "50px",
   height: "50px",
@@ -20,7 +22,7 @@ const navItems = [
   },
   {
     icon: StarIcon,
-    title: "Dojo",
+    title: "Admin",
     href: routes.dojo,
   },
   {
@@ -38,8 +40,9 @@ const navItems = [
 export const Navigation = () => {
   return (
     <nav
+      style={{ width: navigationWidth }}
       className={clsx(
-        "fixed top-0 left-0 bottom-0 w-36 py-7",
+        "fixed top-0 left-0 bottom-0 py-7",
         "flex flex-col items-center",
         "bg-purple-700 fill-purple-300 text-purple-300",
         "text-sm font-medium"

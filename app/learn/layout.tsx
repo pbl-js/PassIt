@@ -1,5 +1,8 @@
 import React from "react";
-import { Navigation } from "../../components/navigation/Navigation";
+import {
+  Navigation,
+  navigationWidth,
+} from "../../components/navigation/Navigation";
 
 export default function LearnLayout({
   children,
@@ -9,7 +12,12 @@ export default function LearnLayout({
   return (
     <>
       <Navigation />
-      <div className="w-full h-full bg-slate-400">{children}</div>
+      <div
+        className="w-full min-h-screen p-8"
+        style={{ marginLeft: navigationWidth }}
+      >
+        {children}
+      </div>
     </>
   );
 }
