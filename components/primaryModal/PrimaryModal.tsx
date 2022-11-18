@@ -2,6 +2,7 @@ import React from "react";
 import { Portal } from "@reach/portal";
 import { CloseModalFunctionType } from "../../hooks/useModalState";
 import ArrowIcon from "public/icons/half-arrow-left.svg";
+import { useKeyboardEvent } from "@react-hookz/web";
 import clsx from "clsx";
 
 type PrimaryModalWrapperProps = {
@@ -15,6 +16,8 @@ export const PrimaryModalWrapper = ({
   closeModal,
   title,
 }: PrimaryModalWrapperProps) => {
+  useKeyboardEvent("Escape", closeModal, [closeModal]);
+
   return (
     <Portal>
       <div

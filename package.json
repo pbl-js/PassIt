@@ -19,6 +19,7 @@
     "@next/font": "^13.0.2",
     "@prisma/client": "^4.6.1",
     "@reach/portal": "^0.18.0",
+    "@react-hookz/web": "^19.1.0",
     "clsx": "^1.2.1",
     "next": "13.0.0",
     "prisma": "^4.6.1",
