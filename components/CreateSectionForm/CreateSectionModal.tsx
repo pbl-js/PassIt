@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { useRouter } from "next/router";
 import React from "react";
 import { CloseModalFunctionType } from "../../hooks/useModalState";
 import { PrimaryModalWrapper } from "../primaryModal/PrimaryModal";
@@ -16,6 +17,9 @@ const inputClassName = clsx(
 );
 
 export const CreateSectionModal = ({ closeModal }: CreateSectionForm) => {
+  const router = useRouter();
+  console.log(router);
+
   return (
     <PrimaryModalWrapper closeModal={closeModal} title="Create Section">
       <div className="flex flex-col gap-5">
@@ -47,6 +51,9 @@ export const CreateSectionModal = ({ closeModal }: CreateSectionForm) => {
             placeholder="#333333"
           />
         </div>
+        <button className="bg-theme-500 h-12 rounded-lg font-semibold text-white">
+          Add
+        </button>
       </div>
     </PrimaryModalWrapper>
   );

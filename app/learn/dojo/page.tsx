@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 import { getSections } from "../../../server/models/section";
@@ -25,7 +26,7 @@ export default async function AdminPage() {
     <div className="w-full">
       <ControlCenter />
       <div className="flex flex-col gap-12">
-        {sections.map(({ id, title }) => (
+        {sections?.map(({ id, title }) => (
           <div key={id}>
             <div className="text-xl font-semibold tracking-wider uppercase">
               {title}

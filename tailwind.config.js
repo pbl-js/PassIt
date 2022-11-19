@@ -11,8 +11,9 @@ module.exports = {
         "gradient-purple-light": "#7B3697",
         "gradient-purple-dark": "#4F1462",
         theme: {
-          800: "#221447", // Primary
-          700: "#342068", // Secondary
+          800: "#221447", // Primary bgc
+          700: "#342068", // Secondary bgc
+          500: "#5925E1", // Main color
           150: "#A59CD9", // Light text
         },
         purple: {
