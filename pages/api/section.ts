@@ -1,5 +1,6 @@
 import { NextApiResponse, NextApiRequest } from "next";
 import { prisma } from "../../server/db/client";
+import { getCurrentUser } from "../../utils/session";
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method, query } = req;
@@ -11,6 +12,12 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(200).json(posts);
       break;
     case "POST":
+      const user = await getCurrentUser();
+
+      if (!user) {
+        res.status(401).json({ error: "Unauthorized" });
+      }
+
       try {
         const post = await prisma.section.create({
           data: {
