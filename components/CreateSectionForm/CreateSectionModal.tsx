@@ -17,9 +17,6 @@ const inputClassName = clsx(
 );
 
 export const CreateSectionModal = ({ closeModal }: CreateSectionForm) => {
-  const router = useRouter();
-  console.log(router);
-
   return (
     <PrimaryModalWrapper closeModal={closeModal} title="Create Section">
       <div className="flex flex-col gap-5">

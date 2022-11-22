@@ -6,4 +6,5 @@ export const routes = {
   dojo: "/learn/dojo",
   profile: "/learn/profile",
   topics: "/learn/topics",
+  signIn: "/auth",
 } as const;
