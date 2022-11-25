@@ -60,10 +60,9 @@ model VerificationToken {
 // APPLICATION
 
 model Section {
-  id      String  @id @unique @default(cuid())
-  title   String
-  topicId String
-  topics  Topic[]
+  id     String  @id @unique @default(cuid())
+  title  String
+  topics Topic[]
 }
 
 enum TopicType {

@@ -22,7 +22,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         const post = await prisma.section.create({
           data: {
             title: "eloo",
-            id: 2,
+            id: "2",
           },
         });
 
