@@ -7,9 +7,13 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   switch (method) {
     case "GET":
-      const posts = await prisma.section.findMany();
+      try {
+        const posts = await prisma.section.findMany();
 
-      res.status(200).json(posts);
+        res.status(200).json(posts);
+      } catch (error) {
+        res.status(500).json({ error: "Failed to load data" });
+      }
       break;
     case "POST":
       const user = await getCurrentUser();
