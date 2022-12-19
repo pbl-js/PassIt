@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { signOut } from "next-auth/react";
-import React from "react";
-import { CurrentUserType } from "../../../utils/session";
+import { signOut, useSession } from 'next-auth/react';
+import React from 'react';
+import { CurrentUserType } from '../../../utils/session';
 
-type ProfilePageClient = {
-  user: CurrentUserType;
-};
+type ProfilePageClient = {};
 
-export const ProfilePageClient = ({ user }: ProfilePageClient) => {
+export const ProfilePageClient = ({}: ProfilePageClient) => {
+  const { data } = useSession();
+
   return (
     <div>
-      <p>Signed in as {user?.email}</p>
+      {data?.user && <p>Signed in as {data.user.email}</p>}
       <button onClick={() => signOut()}>Sign out</button>
     </div>
   );

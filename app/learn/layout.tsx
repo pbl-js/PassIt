@@ -1,11 +1,14 @@
-import { redirect } from "next/navigation";
-import React from "react";
+import clsx from 'clsx';
+import { SessionProvider } from 'next-auth/react';
+import { redirect } from 'next/navigation';
+import React from 'react';
 import {
   Navigation,
   navigationWidth,
-} from "../../components/navigation/Navigation";
-import { routes } from "../../consts/routes";
-import { getCurrentUser } from "../../utils/session";
+} from '../../components/navigation/Navigation';
+import { routes } from '../../consts/routes';
+import { getCurrentUser } from '../../utils/session';
+import { LearnClientLayout } from './ClientLayout';
 
 export default async function LearnLayout({
   children,
@@ -18,15 +21,5 @@ export default async function LearnLayout({
     redirect(routes.signIn);
   }
 
-  return (
-    <>
-      <Navigation />
-      <div
-        className="w-full min-h-screen p-8"
-        style={{ marginLeft: navigationWidth }}
-      >
-        {children}
-      </div>
-    </>
-  );
+  return <LearnClientLayout>{children}</LearnClientLayout>;
 }

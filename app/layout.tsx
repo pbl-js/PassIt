@@ -1,11 +1,11 @@
-import React from "react";
-import "./globals.css";
+import React from 'react';
+import './globals.css';
 
-import { Montserrat } from "@next/font/google";
-import { ClientLayout } from "./ClientLayout";
-import { unstable_getServerSession } from "next-auth";
-import { getSession } from "next-auth/react";
-import { authOptions } from "../pages/api/auth/[...nextauth]";
+import { Montserrat } from '@next/font/google';
+import { unstable_getServerSession } from 'next-auth';
+import { getSession } from 'next-auth/react';
+import { authOptions } from '../pages/api/auth/[...nextauth]';
+import clsx from 'clsx';
 
 const montserrat = Montserrat();
 
@@ -14,13 +14,9 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await unstable_getServerSession(authOptions);
-
   return (
     <html lang="en">
-      <body className={montserrat.className}>
-        <ClientLayout session={session}>{children}</ClientLayout>
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }
