@@ -21,7 +21,10 @@ function InnerLearnClientLayout({ children }: ClientLayoutProps) {
         <Navigation />
         <div
           className="w-full min-h-screen p-8"
-          style={{ marginLeft: navigationWidth }}
+          style={{
+            marginLeft: navigationWidth,
+            width: `calc(100% - ${navigationWidth})`,
+          }}
         >
           {children}
         </div>
