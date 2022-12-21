@@ -29,7 +29,7 @@ function InnerLearnClientLayout({ children }: ClientLayoutProps) {
       <div
         className={clsx(
           'z-0 fixed top-0 left-0 bottom-0 right-0',
-          'bg-gradient-to-br from-gradient-purple-light to-gradient-purple-dark'
+          'bg-purple-600'
         )}
       />
     </div>

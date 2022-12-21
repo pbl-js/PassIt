@@ -12,14 +12,18 @@ module.exports = {
         "gradient-purple-dark": "#4F1462",
         theme: {
           800: "#221447", // Primary bgc
-          700: "#342068", // Secondary bgc
+          600: "#342068", // Secondary bgc
           500: "#5925E1", // Main color
           150: "#A59CD9", // Light text
         },
         purple: {
           300: "rgb(117, 93, 129)",
-          700: "rgb(51, 21, 65)",
+          800: "#321443", // BGC-primary
+          600: "#471875", // BGC-secondary
         },
+        yellow: {
+          400: "#DBE66A" // Main accent
+        }
       },
     },
   },
