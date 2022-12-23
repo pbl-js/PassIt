@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { Button } from '../../components/Button/Button';
 import { routes } from '../../consts/routes';
 
 export default async function RootLayout({
@@ -20,13 +21,9 @@ export default async function RootLayout({
           <Link href={routes.pageOne}>Page one</Link>
           <Link href={routes.pageTwo}>Page two</Link>
           <Link href={routes.pageThree}>Page three</Link>
+
+          <Button href="/learn/topics">GO TO APPLICATION</Button>
         </div>
-        <Link
-          className="py-5 px-8 bg-yellow-400 rounded-xl text-purple-800 text-lg font-bold"
-          href="/learn"
-        >
-          GO TO APPLICATION
-        </Link>
       </div>
       {children}
     </div>

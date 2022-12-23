@@ -80,3 +80,14 @@ model Topic {
   Section Section @relation(fields: [sectionId], references: [id])
   User    User    @relation(fields: [userId], references: [id])
 }
+
+enum ProgressTopicStatus {
+  SEEN
+  LEARNING
+  MASTERING
+}
+
+model ProgressTopic {
+  id   String              @id @default(cuid())
+  type ProgressTopicStatus
+}
