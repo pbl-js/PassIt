@@ -1,8 +1,8 @@
-import clsx from 'clsx';
-import Link from 'next/link';
-import React from 'react';
-import { routes } from '../../consts/routes';
-import { LoadingWrapper } from '../LoadingWrapper/LoadingWrapper';
+import clsx from "clsx";
+import Link from "next/link";
+import React from "react";
+import { routes } from "../../consts/routes";
+import { LoadingWrapper } from "../LoadingWrapper/LoadingWrapper";
 
 // TODO: React better button component
 
@@ -19,9 +19,9 @@ export const Button = ({ children, href, className, loading }: ButtonProps) => {
       <LoadingWrapper className={className}>
         <Link
           className={clsx(
-            'py-5 px-8 bg-yellow-400 rounded-xl text-purple-800 text-lg font-bold',
-            'shrink-0 mr-auto',
-            className
+            "py-5 px-8 bg-yellow-400 rounded-xl text-purple-800 text-lg font-bold",
+            "shrink-0 mr-auto",
+            className,
           )}
           href={href}
         >
@@ -33,9 +33,9 @@ export const Button = ({ children, href, className, loading }: ButtonProps) => {
   return (
     <Link
       className={clsx(
-        'py-5 px-8 bg-yellow-400 rounded-xl text-purple-800 text-lg font-bold',
-        'shrink-0 mr-auto',
-        className
+        "py-5 px-8 bg-yellow-400 rounded-xl text-purple-800 text-lg font-bold",
+        "shrink-0 mr-auto",
+        className,
       )}
       href={href}
     >

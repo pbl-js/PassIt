@@ -1,5 +1,5 @@
-import React from 'react';
-import { LoadingWrapper } from '../LoadingWrapper/LoadingWrapper';
+import React from "react";
+import { LoadingWrapper } from "../LoadingWrapper/LoadingWrapper";
 
 type ParagraphProps = {
   children: React.ReactNode;

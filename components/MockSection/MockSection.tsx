@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const MockSection = ({ title }: { title: string }) => {
   return (

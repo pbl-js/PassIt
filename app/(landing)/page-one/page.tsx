@@ -1,4 +1,4 @@
-import { MockSection } from '../../../components/MockSection/MockSection';
+import { MockSection } from "../../../components/MockSection/MockSection";
 
 export default function PageOne() {
   return (

@@ -1,8 +1,8 @@
-import React from 'react';
-import { AuthPageClient } from './pageClient';
-import { getSession } from '../../utils/session';
-import { redirect } from 'next/navigation';
-import { routes } from '../../consts/routes';
+import React from "react";
+import { AuthPageClient } from "./pageClient";
+import { getSession } from "../../utils/session";
+import { redirect } from "next/navigation";
+import { routes } from "../../consts/routes";
 
 const AuthPage = async () => {
   const session = await getSession();

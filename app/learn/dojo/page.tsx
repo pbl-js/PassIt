@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import React from "react";
 
 import { getSections } from "../../../server/models/section";
@@ -28,15 +27,10 @@ export default async function AdminPage() {
       <div className="flex flex-col gap-12">
         {sections?.map(({ id, title }) => (
           <div key={id}>
-            <div className="text-xl font-semibold tracking-wider uppercase">
-              {title}
-            </div>
+            <div className="text-xl font-semibold tracking-wider uppercase">{title}</div>
             <div className="mt-5 flex flex-row gap-6">
               {mockTopics.map(({ title, id }) => (
-                <div
-                  key={id}
-                  className="w-[200px] h-[150px] p-6 bg-yellow-500 rounded-2xl text-lg font-semibold"
-                >
+                <div key={id} className="w-[200px] h-[150px] p-6 bg-yellow-500 rounded-2xl text-lg font-semibold">
                   {title}
                 </div>
               ))}

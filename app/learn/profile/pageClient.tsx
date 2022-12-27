@@ -1,12 +1,9 @@
-'use client';
+"use client";
 
-import { signOut, useSession } from 'next-auth/react';
-import React from 'react';
-import { CurrentUserType } from '../../../utils/session';
+import { signOut, useSession } from "next-auth/react";
+import React from "react";
 
-type ProfilePageClient = {};
-
-export const ProfilePageClient = ({}: ProfilePageClient) => {
+export const ProfilePageClient = () => {
   const { data } = useSession();
 
   return (

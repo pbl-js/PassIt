@@ -1,9 +1,9 @@
-import { NextApiResponse, NextApiRequest } from "next";
+import { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "../../server/db/client";
 import { getCurrentUser } from "../../utils/session";
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { method, query } = req;
+  const { method } = req;
 
   switch (method) {
     case "GET":
@@ -16,6 +16,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       }
       break;
     case "POST":
+      // eslint-disable-next-line no-case-declarations
       const user = await getCurrentUser();
 
       if (!user) {
@@ -32,11 +33,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
         res.status(201).json(post);
       } catch (error) {
+        // eslint-disable-next-line no-console
         console.log(error);
       }
-      break;
-    default:
-      console.log("first");
       break;
   }
 }

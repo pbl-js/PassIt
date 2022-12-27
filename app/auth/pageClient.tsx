@@ -6,13 +6,14 @@ import { SessionType } from "../../utils/session";
 type AuthPageClientProps = { session: SessionType };
 
 export const AuthPageClient = ({ session }: AuthPageClientProps) => {
-  if (session)
+  if (session) {
     return (
       <div>
         <p>Signed in as {session.user?.email}</p>
         <button onClick={() => signOut()}>Sign out</button>
       </div>
     );
+  }
 
   return (
     <div>

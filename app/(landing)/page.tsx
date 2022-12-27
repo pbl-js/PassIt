@@ -1,7 +1,6 @@
-import Link from 'next/link';
-import { MockSection } from '../../components/MockSection/MockSection';
+import { MockSection } from "../../components/MockSection/MockSection";
 
-const sections = ['Section One', 'Section Two', 'Section Three'];
+const sections = ["Section One", "Section Two", "Section Three"];
 
 export default function Page() {
   return (
